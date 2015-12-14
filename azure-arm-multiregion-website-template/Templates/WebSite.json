@@ -20,14 +20,7 @@
             "metadata": {
                 "description": "Locations"
             }
-        },
-        "numberOfSites": {
-            "type": "int",
-            "defaultValue": 5,
-            "metadata": {
-                "description": "Number of locations"
-            }
-        },
+        },     
         "sku": {
             "type": "string",
             "allowedValues": [
@@ -94,7 +87,7 @@
             },
             "copy": {
                 "name": "hostingPlanCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -125,7 +118,7 @@
             },
             "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -195,7 +188,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -233,7 +226,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -271,7 +264,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -309,7 +302,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -347,7 +340,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         },
         {
@@ -367,7 +360,7 @@
             },
              "copy": {
                 "name": "siteCopy",
-                "count": "[parameters('numberOfSites')]"
+                "count": "[length(parameters('siteLocations'))]"
             }
         }
     ]
